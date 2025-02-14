@@ -3,23 +3,24 @@
 import os
 import platform
 
-# Class of bots
-class bots:
+
+# Class of Bots
+class Bots:
     def __init__(self, email, password):
         self.email = email
         self.password = password
 
     def __str__(self):
-        return f"bots gmail is {self.email}, and password is {self.password}"
+        return f"Bots gmail is {self.email}, and password is {self.password}"
 
 
-# create the array of bots
+# create the array of Bots
 botArray = []
 with open("InstagrapiLogins.txt", "r") as file:
     for line in file:
         entry = line.split()
         email, password = entry
-        bot = bots(email, password)
+        bot = Bots(email, password)
         botArray.append(bot)
 
 # Grabbing prompt picture
