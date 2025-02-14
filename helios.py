@@ -9,7 +9,6 @@ testbox = ptg.Label()
 def test():
     meme = input.get_lines()
     input.delete_back(20)
-    testbox.tim.print(meme)
 
 
 test_button = ptg.Button("test", lambda *_: test(), box="EMPTY")
