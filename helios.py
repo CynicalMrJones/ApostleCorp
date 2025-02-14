@@ -1,3 +1,4 @@
+
 import pytermgui as ptg
 
 ptg.boxes.ROUNDED.set_chars_of(ptg.Container)
@@ -12,6 +13,7 @@ def test():
 
 
 test_button = ptg.Button("test", lambda *_: test(), box="EMPTY")
+test_button2 = ptg.Button("quit", lambda *_: manager.stop(), box="EMPTY")
 
 showcase = ptg.Window(
     ptg.Splitter(
@@ -27,6 +29,7 @@ showcase = ptg.Window(
         ptg.Label("This is a test")
     ),
     test_button,
+    test_button2,
     width=60,
     box="DOUBLE",
 ).set_title("HELIOS").center()
