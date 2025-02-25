@@ -43,6 +43,7 @@ print(draw)
 while True:
     command = input("Command: ")
     if command == "quit":
+        os.system(command_clear)
         break
     elif command == "clear":
         os.system(command_clear)
