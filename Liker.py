@@ -1,6 +1,6 @@
 import instagrapi
 from instagrapi import Client
-
+# Takes the array of bots and the link to the post as parameters
 def liker(bots, link):
     try:
         for x in range(0, len(bots)):
@@ -10,6 +10,7 @@ def liker(bots, link):
         print("The operation has failed")
         return 1
     return 0
+    #returns 1 on function error
 
         
 
