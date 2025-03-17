@@ -2,6 +2,7 @@
 # imports
 import os
 import platform
+from instagrapi import Client
 
 
 # Class of Bots
@@ -11,7 +12,7 @@ class Bots:
         self.password = password
 
     def __str__(self):
-        return f"Bots gmail is {self.email}, and password is {self.password}"
+        return f"The bot's gmail is {self.email}, and password is {self.password}"
 
 
 # create the array of Bots
@@ -51,5 +52,16 @@ while True:
     elif command == "show":
         for i in botArray:
             print(i)
+    elif command == "login":
+        cl = Client(request_timeout=60)
+        print("Which bot would you like to login with")
+        test = input("Login: ")
+        try:
+            for i in botArray:
+                if test == i.email:
+                    cl.login(test, i.password)
+                    print("Login sucessful")
+        except:
+            print("Login failed")
     else:
         print(command)
