@@ -1,9 +1,8 @@
-
 # imports
 import os
 import platform
+import Liker
 from instagrapi import Client
-
 
 # Class of Bots
 class Bots:
@@ -12,7 +11,7 @@ class Bots:
         self.password = password
 
     def __str__(self):
-        return f"The bot's gmail is {self.email}, and password is {self.password}"
+        return f"Bots gmail is {self.email}, and password is {self.password}"
 
 
 # create the array of Bots
@@ -50,18 +49,23 @@ while True:
         os.system(command_clear)
         print(draw)
     elif command == "show":
+        count = 0
         for i in botArray:
-            print(i)
+            print(count, i)
+            count+=1
     elif command == "login":
         cl = Client(request_timeout=60)
         print("Which bot would you like to login with")
-        test = input("Login: ")
+        test = int(input("Login: "))
         try:
-            for i in botArray:
-                if test == i.email:
-                    cl.login(test, i.password)
-                    print("Login sucessful")
+            cl.login(botArray[test].email, botArray[test].password)
+            print("Login sucessful")
         except:
-            print("Login failed")
+            print("Login Failed")
+
+    elif command == "like":
+        link = input("Please input link :: ")
+        likerBot = int(input("Please input bot number :: "))
+        Liker.liker(botArray[likerBot], link)
     else:
         print(command)
