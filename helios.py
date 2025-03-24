@@ -2,6 +2,7 @@
 import os
 import platform
 import Liker
+import Commenter
 from instagrapi import Client
 
 # Class of Bots
@@ -67,5 +68,10 @@ while True:
         link = input("Please input link :: ")
         likerBot = int(input("Please input bot number :: "))
         Liker.liker(botArray[likerBot], link)
+    elif command == "comment":
+        link = input("Please input link :: ")
+        commentBot = int(input("Please input bot number :: "))
+        comment = (input("Please enter your comment :: "))
+        Commenter.commenter(botArray[commentBot], link)
     else:
         print(command)
