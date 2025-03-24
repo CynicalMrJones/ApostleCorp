@@ -72,6 +72,6 @@ while True:
         link = input("Please input link :: ")
         commentBot = int(input("Please input bot number :: "))
         comment = (input("Please enter your comment :: "))
-        Commenter.commenter(botArray[commentBot], link)
+        Commenter.commenter(botArray[commentBot], link, comment)
     else:
         print(command)
