@@ -6,6 +6,7 @@ import Poster
 import Commenter
 from instagrapi import Client
 
+
 # Class of Bots
 class Bots:
     def __init__(self, email, password):
@@ -54,7 +55,7 @@ while True:
         count = 0
         for i in botArray:
             print(count, i)
-            count+=1
+            count += 1
     elif command == "login":
         cl = Client(request_timeout=60)
         print("Which bot would you like to login with")
@@ -70,8 +71,8 @@ while True:
         Liker.liker(botArray[likerBot], link)
     elif command == "mass like":
         link = input("Please input link :: ")
-        for i in botArray: 
-            Liker.liker(botArray[i], link)         
+        for i in botArray:
+            Liker.liker(botArray[i], link)
     elif command == "comment":
         link = input("Please input link :: ")
         commentBot = int(input("Please input bot number :: "))
