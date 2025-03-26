@@ -1,9 +1,6 @@
 import instagrapi
 from instagrapi import Client
 
-import instagrapi
-from instagrapi import Client
-
 def liker(bots, link):
     botInstant = Client(request_timeout = 60)
     botInstant.login(bots.email, bots.password)
