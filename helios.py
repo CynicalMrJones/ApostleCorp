@@ -73,5 +73,8 @@ while True:
         commentBot = int(input("Please input bot number :: "))
         comment = (input("Please enter your comment :: "))
         Commenter.commenter(botArray[commentBot], link, comment)
+    elif command == "post":
+        postBot = int(input("Please input bot number :: "))
+        Poster(botArray[postBot])
     else:
         print(command)
