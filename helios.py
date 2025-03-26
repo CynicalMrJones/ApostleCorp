@@ -64,11 +64,14 @@ while True:
             print("Login sucessful")
         except:
             print("Login Failed")
-
     elif command == "like":
         link = input("Please input link :: ")
         likerBot = int(input("Please input bot number :: "))
         Liker.liker(botArray[likerBot], link)
+    elif command == "mass like":
+        link = input("Please input link :: ")
+        for i in botArray: 
+            Liker.liker(botArray[i], link)         
     elif command == "comment":
         link = input("Please input link :: ")
         commentBot = int(input("Please input bot number :: "))
@@ -76,6 +79,6 @@ while True:
         Commenter.commenter(botArray[commentBot], link, comment)
     elif command == "post":
         postBot = int(input("Please input bot number :: "))
-        Poster.poster(botArray[postBot])
+        Poster(botArray[postBot])
     else:
         print(command)
