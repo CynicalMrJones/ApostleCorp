@@ -73,6 +73,11 @@ while True:
         link = input("Please input link :: ")
         for i in botArray:
             Liker.liker(botArray[i], link)
+        numLikes = int(input("How many bots should like the post :: "))
+        i = 0
+        while i < numLikes and i < len(botArray) :
+            Liker.liker(botArray[i], link)   
+            i += 1
     elif command == "comment":
         link = input("Please input link :: ")
         commentBot = int(input("Please input bot number :: "))
