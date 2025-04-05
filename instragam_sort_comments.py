@@ -1,19 +1,15 @@
-pip install instagrapi openai textblob
-
 from instagrapi import Client
 import openai
 from textblob import TextBlob
 
-# OpenAI API Key
-openai.api_key = "YOUR_OPENAI_API_KEY"
-
-# Instagram login credentials
-USERNAME = Liqmass69@gmail.com
-PASSWORD = JumpingFor33
 
 # Initialize Instagram Client
 cl = Client()
-cl.login(USERNAME, PASSWORD)
+with open("InstagrapiLogins.txt", "r") as file:
+    entry = file.readline()
+    email, password = entry.split(" ")
+    cl.login(email,password)
+
 
 def classify_comment(comment):
     """Classifies the comment as positive or negative using TextBlob sentiment analysis."""
@@ -51,5 +47,3 @@ def process_comments(post_url, output_file="comments.txt"):
     print(f"✅ Comments saved to {output_file}")
 
 # Example usage: replace with the URL of the Instagram post
-post_url = "https://www.instagram.com/p/POST_ID/"
-process_comments(post_url)
