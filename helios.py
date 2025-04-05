@@ -4,6 +4,7 @@ import platform
 import Liker
 import Poster
 import Commenter
+import instragam_sort_comments
 from instagrapi import Client
 
 
@@ -58,7 +59,7 @@ while True:
             count += 1
     elif command == "login":
         cl = Client(request_timeout=60)
-        print("Which bot would you like to login with")
+        print("Which bot would you like to login with :: ")
         test = int(input("Login: "))
         try:
             cl.login(botArray[test].email, botArray[test].password)
@@ -86,5 +87,19 @@ while True:
     elif command == "post":
         postBot = int(input("Please input bot number :: "))
         Poster(botArray[postBot])
+    elif command == "sortComment":
+        link = input("Please input a link :: ")
+        instragam_sort_comments.process_comments(link)
+    elif command == "massComment":
+        link = input("Please input link :: ")
+        commentDoc = input("Please input the txt file with comments :: ")
+        botlen = int(input("Please input the number of bots you would like to comment :: "))
+        botRay = {}
+        for i in range (botlen):
+            spot = int(input("Please input the bot number :: "))
+            botRay[i] = botArray[spot]
+        
+        Commenter.massComment(botRay, link, commentDoc)
+        
     else:
         print(command)
