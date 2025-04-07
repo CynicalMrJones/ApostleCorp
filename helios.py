@@ -89,7 +89,7 @@ while True:
         Poster(botArray[postBot])
     elif command == "sortComment":
         link = input("Please input a link :: ")
-        instragam_sort_comments.process_comments(link)
+        instragam_sort_comments.process_comments(botArray[1],link)
     elif command == "massComment":
         link = input("Please input link :: ")
         commentDoc = input("Please input the txt file with comments :: ")

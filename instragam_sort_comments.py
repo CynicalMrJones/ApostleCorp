@@ -5,26 +5,31 @@ from textblob import TextBlob
 
 # Initialize Instagram Client
 cl = Client()
-with open("InstagrapiLogins.txt", "r") as file:
+'''with open("InstagrapiLogins.txt", "r") as file:
     entry = file.readline()
     email, password = entry.split(" ")
     cl.login(email,password)
+'''
 
+def botLogin(bot):
+    bot.email
+    cl.login(bot.email, bot.password)
 
 def classify_comment(comment):
-    """Classifies the comment as positive or negative using TextBlob sentiment analysis."""
+    # Classifies the comment as positive or negative using TextBlob sentiment analysis.
     analysis = TextBlob(comment)
     sentiment_score = analysis.sentiment.polarity
     return "positive" if sentiment_score > 0 else "negative"
 
 def get_comments(post_url):
-    """Fetch comments from a given Instagram post."""
+    # Fetch comments from a given Instagram post.
     post_id = cl.media_id(cl.media_pk_from_url(post_url))
     comments = cl.media_comments(post_id)
     return [comment.text for comment in comments]
 
-def process_comments(post_url, output_file="comments.txt"):
-    """Extracts, classifies, and saves comments to a text file."""
+def process_comments(bot, post_url, output_file="comments.txt"):
+    botLogin(bot)
+    # Extracts, classifies, and saves comments to a text file.
     comments = get_comments(post_url)
 
     positive_comments = []

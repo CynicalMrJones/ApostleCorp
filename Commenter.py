@@ -14,7 +14,6 @@ def commenter(bots, link, comment):
 
     print("The operation was completed successfully")
 
-
 def massComment(bots, link, comments):
     commentRay = {}
     count = 0
