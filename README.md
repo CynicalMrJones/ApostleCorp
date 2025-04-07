@@ -12,7 +12,7 @@ pip install instagrapi
 Unfortunately, all bots need to be created manually and inserted into a text file. 
 1) Clone the repository using
 ```
-	git clone https://github.com/cynicalmrjones/ApostleCorp
+git clone https://github.com/cynicalmrjones/ApostleCorp
 ```
 2) Create a file named InstagrapiLogins.txt 
 	* Format the file using the gmail account followed by password
