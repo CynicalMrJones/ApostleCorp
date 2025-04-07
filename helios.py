@@ -95,11 +95,8 @@ while True:
         commentDoc = input("Please input the txt file with comments :: ")
         botlen = int(input("Please input the number of bots you would like to comment :: "))
         botRay = {}
-        for i in range (botlen):
+        for i in range(botlen):
             spot = int(input("Please input the bot number :: "))
-            botRay[i] = botArray[spot]
-        
         Commenter.massComment(botRay, link, commentDoc)
-        
     else:
-        print(command)
+        print("Command not found try again")
