@@ -10,10 +10,10 @@ def commenter(bots, link, comment):
         alink = botInstant.media_pk_from_url(link)
         mediaID = botInstant.media_id(alink)
         botInstant.media_comment(mediaID, comment)
+        print("The operation was completed successfully")
     except:
         print(f'{bots.email} failed to post a comment ')
 
-    print("The operation was completed successfully")
 
 
 def massComment(bots, link, comments):
@@ -25,10 +25,7 @@ def massComment(bots, link, comments):
             count += 1
     count = 0
     for i in bots:
-        try:
-            count = random.randrange(0,len(commentRay))
-            commenter(bots[i], link, commentRay[count])
-            commentRay.pop(count)
-            count = 0
-        except:
-            print("There was an error. This operation is terminated")
+        count = random.randrange(0,len(commentRay))
+        commenter(bots[i], link, commentRay[count])
+        commentRay.pop(count)
+        count = 0
