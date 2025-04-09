@@ -20,7 +20,6 @@ def massComment(bots, link, comments):
     commentRay = {}
     count = 0
     with open(comments, "r") as file:
-        
         for line in file:
             commentRay[count] = line
             count += 1
@@ -33,4 +32,3 @@ def massComment(bots, link, comments):
             count = 0
         except:
             print("There was an error. This operation is terminated")
-    
