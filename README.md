@@ -18,11 +18,12 @@ git clone https://github.com/cynicalmrjones/ApostleCorp
 	* Format the file using the gmail account followed by password
 	ex.
 		
-		> ****@gmail.com passwd
-  > 
-		> ******@gmail.com passwd2
-> 
-		> *******@gmail.com passwd3
+		
+   		>****@gmail.com passwd
+		>
+  		>******@gmail.com passwd2
+		>
+		>*******@gmail.com passwd3
 3) Execute by running the python compiler on helios.py
 	```
 	python3 helios.py
