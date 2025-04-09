@@ -1,4 +1,5 @@
 import instagrapi
+import random
 from instagrapi import Client
 
 
@@ -13,6 +14,8 @@ def commenter(bots, link, comment):
         print(f'{bots.email} failed to post a comment ')
 
     print("The operation was completed successfully")
+
+
 def massComment(bots, link, comments):
     commentRay = {}
     count = 0
@@ -24,8 +27,10 @@ def massComment(bots, link, comments):
     count = 0
     for i in bots:
         try:
+            count = random.randrange(0,len(commentRay))
             commenter(bots[i], link, commentRay[count])
-            count += 1
+            commentRay.pop(count)
+            count = 0
         except:
             print("There was an error. This operation is terminated")
     

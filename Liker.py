@@ -9,6 +9,7 @@ def liker(bots, link):
             botInstant.login(bots.email, bots.password)
         except:
             print(f'{bots.email} failed to login')
+            return -1
         LikeID = botInstant.media_id(botInstant.media_pk_from_url(link))
         botInstant.media_like(LikeID)
         print(f'{bots.email} liked the media')
