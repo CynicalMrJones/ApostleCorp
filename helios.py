@@ -72,8 +72,6 @@ while True:
         Liker.liker(botArray[likerBot], link)
     elif command == "mass like":
         link = input("Please input link :: ")
-        for i in botArray:
-            Liker.liker(botArray[i], link)
         numLikes = int(input("How many bots should like the post :: "))
         i = 0
         while i < numLikes and i < len(botArray):
