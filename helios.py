@@ -104,6 +104,7 @@ while True:
         botRay = {}
         for i in range(botlen):
             spot = int(input("Please input the bot number :: "))
+            botRay[i] = botArray[spot]
         Commenter.massComment(botRay, link, commentDoc)
     else:
         print("Command not found try again")
