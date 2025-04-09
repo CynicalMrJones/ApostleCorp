@@ -19,7 +19,9 @@ git clone https://github.com/cynicalmrjones/ApostleCorp
 	ex.
 		
 		> ****@gmail.com passwd
+  > 
 		> ******@gmail.com passwd2
+> 
 		> *******@gmail.com passwd3
 3) Execute by running the python compiler on helios.py
 	```
