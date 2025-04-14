@@ -4,12 +4,14 @@ from textblob import TextBlob
 
 
 # Initialize Instagram Client
+
+
 cl = Client()
-'''with open("InstagrapiLogins.txt", "r") as file:
-    entry = file.readline()
-    email, password = entry.split(" ")
-    cl.login(email,password)
-'''
+def initialize():
+    with open("InstagrapiLogins.txt", "r") as file:
+        entry = file.readline()
+        email, password = entry.split(" ")
+        cl.login(email,password)
 
 def botLogin(bot):
     bot.email
@@ -27,9 +29,9 @@ def get_comments(post_url):
     comments = cl.media_comments(post_id)
     return [comment.text for comment in comments]
 
-def process_comments(bot, post_url, output_file="comments.txt"):
-    botLogin(bot)
-    # Extracts, classifies, and saves comments to a text file.
+def process_comments(post_url, output_file="comments.txt"):
+    initialize()
+    """Extracts, classifies, and saves comments to a text file."""
     comments = get_comments(post_url)
 
     positive_comments = []
