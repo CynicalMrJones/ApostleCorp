@@ -1,10 +1,10 @@
 # imports
 import os
 import platform
-import Liker
-import Poster
-import Commenter
-import instragam_sort_comments
+from functions import Liker
+from functions import Poster
+from functions import Commenter
+from functions import instragam_sort_comments
 from instagrapi import Client
 
 
@@ -28,7 +28,7 @@ with open("InstagrapiLogins.txt", "r") as file:
         botArray.append(bot)
 
 # Grabbing prompt picture
-f = open("pic.pic", "r")
+f = open("pics/pic.pic", "r")
 draw = f.read()
 
 # platform check for clearing the console
