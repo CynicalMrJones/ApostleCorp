@@ -23,8 +23,11 @@ def massComment(bots, link, comments):
             commentRay[count] = line
             count += 1
     count = 0
-    for i in bots:
-        count = random.randrange(0,len(commentRay))
-        commenter(bots[i], link, commentRay[count])
-        commentRay.pop(count)
+    try:
+        for i in bots:
+            count = random.randrange(0, len(commentRay))
+            commenter(bots[i], link, commentRay[count])
+            commentRay.pop(count)
         count = 0
+    except:
+        print("Ran out of comments")

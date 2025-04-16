@@ -93,7 +93,7 @@ while True:
         Commenter.commenter(botArray[commentBot], link, comment)
     elif command == "post":
         postBot = int(input("Please input bot number :: "))
-        Poster(botArray[postBot])
+        Poster.poster(botArray[postBot])
     elif command == "sortComment":
         link = input("Please input a link :: ")
         instragam_sort_comments.process_comments(botArray[1],link)
