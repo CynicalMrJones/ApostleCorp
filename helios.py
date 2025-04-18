@@ -84,7 +84,8 @@ while True:
             botSize = int(input("Please input the number of bots you would like to 'like' :: "))
             for i in botSize:
                 botRay[i] = botArray[int(input("Please input the bot number :: "))]
-        Liker.massLiker(botRay, link)
+                Liker.massLiker(botRay, link)
+        
 
     elif command == "comment":
         link = input("Please input link :: ")
