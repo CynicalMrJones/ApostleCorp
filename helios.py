@@ -91,12 +91,15 @@ while True:
         commentBot = int(input("Please input bot number :: "))
         comment = (input("Please enter your comment :: "))
         Commenter.commenter(botArray[commentBot], link, comment)
+
     elif command == "post":
         postBot = int(input("Please input bot number :: "))
         Poster.poster(botArray[postBot])
+
     elif command == "sortComment":
         link = input("Please input a link :: ")
         instragam_sort_comments.process_comments(botArray[1],link)
+
     elif command == "massComment":
         link = input("Please input link :: ")
         commentDoc = input("Please input the txt file with comments :: ")
