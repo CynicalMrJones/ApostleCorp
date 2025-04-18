@@ -13,7 +13,7 @@ def commenter(bots, link, comment):
         botInstant.login(bots.email, bots.password)
         alink = botInstant.media_pk_from_url(link)
         mediaID = botInstant.media_id(alink)
-        botInstant.media_comment(mediaID, dirname + "/" + comment)
+        botInstant.media_comment(mediaID, dirname + "/commentPrompt/" + comment)
         print("The operation was completed successfully")
     except:
         print(f'{bots.email} failed to post a comment ')
@@ -23,7 +23,7 @@ def massComment(bots, link, comments):
     dirname = os.getcwd()
     commentRay = {}
     count = 0
-    with open(dirname + "/" + comments, "r") as file:
+    with open(dirname + "/commentPrompt/" + comments, "r") as file:
         for line in file:
             commentRay[count] = line
             count += 1

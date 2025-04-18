@@ -9,7 +9,7 @@ def poster(bots):
     try:
         botInstant.login(bots.email, bots.password)
         img = input("Please input the path to your photo (must be a .jpg or a .jpeg)")
-        path = dirname + "/" + img
+        path = dirname + "/pics/" + img
         capt = input("Input the photo caption :: ")
         botInstant.photo_upload(path, capt)
         print("This operation was completed successfully!")
