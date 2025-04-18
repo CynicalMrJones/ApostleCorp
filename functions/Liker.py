@@ -19,6 +19,6 @@ def liker(bots, link):
 def massLiker(bots, link):
     try:
         for i in bots:
-            liker(i, link)
+            liker(bots[i], link)
     except:
         print("There was an error")

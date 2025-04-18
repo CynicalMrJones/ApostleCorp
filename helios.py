@@ -81,10 +81,11 @@ while True:
         if(yn == "y"):
             Liker.massLiker(botArray, link)
         if(yn == "n"):
+            botRay = {}
             botSize = int(input("Please input the number of bots you would like to 'like' :: "))
-            for i in botSize:
-                botRay[i] = botArray[int(input("Please input the bot number :: "))]
-                Liker.massLiker(botRay, link)
+            for i in range (botSize):
+                botRay[i] = botArray[int(input("Please input the bot number to like :: "))]
+            Liker.massLiker(botRay, link)   
         
 
     elif command == "comment":
