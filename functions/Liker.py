@@ -17,8 +17,6 @@ def liker(bots, link):
         print(f'{bots.email} failed to like the media')
 
 def massLiker(bots, link):
-    try:
         for i in bots:
-            liker(bots[i], link)
-    except:
-        print("There was an error")
+            print(i.email, i.password)
+            liker(i, link)

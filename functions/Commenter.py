@@ -31,7 +31,7 @@ def massComment(bots, link, comments):
     try:
         for i in bots:
             count = random.randrange(0, len(commentRay))
-            commenter(bots[i], link, commentRay[count])
+            commenter(i, link, commentRay[count])
             commentRay.pop(count)
         count = 0
     except:
