@@ -28,7 +28,7 @@ with open("InstagrapiLogins.txt", "r") as file:
         botArray.append(bot)
 
 # Grabbing prompt picture
-f = open("pics/pic.pic", "r")
+f = open("pic.pic", "r")
 draw = f.read()
 
 # platform check for clearing the console
@@ -95,7 +95,7 @@ while True:
     elif command == "post":
         postBot = int(input("Please input bot number :: "))
         Poster.poster(botArray[postBot])
-
+        Poster(botArray[postBot])
     elif command == "sortComment":
         link = input("Please input a link :: ")
         instragam_sort_comments.process_comments(botArray[1],link)
@@ -103,11 +103,16 @@ while True:
     elif command == "massComment":
         link = input("Please input link :: ")
         commentDoc = input("Please input the txt file with comments :: ")
-        botlen = int(input("Please input the number of bots you would like to comment :: "))
-        botRay = {}
-        for i in range(botlen):
-            spot = int(input("Please input the bot number :: "))
-            botRay[i] = botArray[spot]
-        Commenter.massComment(botRay, link, commentDoc)
+        yn = input("Would you like for all bots to comment? y/n :: ")
+        if(yn == 'y'):
+            Commenter.massComment(botArray, link, commentDoc)
+        elif(yn == 'n'):
+            botRay = {}
+            botSize = int(input("How many bots would you like to comment? :: "))
+            for i in range(botSize):
+                botRay[i] = botArray[int(input("Please input the bot number to comment :: "))]
+            Commenter.massComment(botRay, link, commentDoc)
+        else: 
+            print("Command not found try again")
     else:
         print("Command not found try again")
