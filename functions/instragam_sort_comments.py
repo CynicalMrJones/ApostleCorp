@@ -1,5 +1,4 @@
 from instagrapi import Client
-import openai
 from textblob import TextBlob
 
 
