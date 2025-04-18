@@ -1,11 +1,13 @@
 # ApostleCorp
 Proof of concept for the development of multiple bots on the Instagram platform. 
 
-## Instagrapi is mandatory for this program
+## Instagrapi and TextBlob is mandatory for this program
 https://github.com/subzeroid/instagrapi/tree/master
+https://textblob.readthedocs.io/en/dev/
 Install using:
 ```
 pip install instagrapi
+pip install textblob
 ```
 
 ## Installation
