@@ -2,7 +2,7 @@
 import os
 from instagrapi import Client
 
-dirname = os.getcwd
+dirname = os.getcwd()
 
 def poster(bots):
     botInstant = Client(request_timeout=60)

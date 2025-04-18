@@ -1,3 +1,4 @@
+
 import instagrapi
 import random
 
@@ -6,7 +7,7 @@ from instagrapi import Client
 
 
 def commenter(bots, link, comment):
-    dirname = os.getcwd
+    dirname = os.getcwd()
     botInstant = Client(request_timeout=60)
     try:
         botInstant.login(bots.email, bots.password)
@@ -19,7 +20,7 @@ def commenter(bots, link, comment):
 
 
 def massComment(bots, link, comments):
-    dirname = os.getcwd
+    dirname = os.getcwd()
     commentRay = {}
     count = 0
     with open(dirname + "/" + comments, "r") as file:
