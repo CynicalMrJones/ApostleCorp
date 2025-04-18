@@ -49,14 +49,17 @@ while True:
     if command == "quit":
         os.system(command_clear)
         break
+
     elif command == "clear":
         os.system(command_clear)
         print(draw)
+
     elif command == "show":
         count = 0
         for i in botArray:
             print(count, i)
             count += 1
+
     elif command == "login":
         cl = Client(request_timeout=60)
         print("Which bot would you like to login with :: ")
@@ -66,25 +69,22 @@ while True:
             print("Login sucessful")
         except:
             print("Login Failed")
+
     elif command == "like":
         link = input("Please input link :: ")
         likerBot = int(input("Please input bot number :: "))
         Liker.liker(botArray[likerBot], link)
+
     elif command == "mass like":
         link = input("Please input link :: ")
-        botRay = {}
-        numLikes = int(input("How many bots should like the post :: "))
-        if(numLikes == len(botArray)):
-            i = 0
-            while i < numLikes and i < len(botArray):
-                Liker.liker(botArray[i], link)
-                i += 1
-        else:
-            for i in range(numLikes):
-                bot = int(input("Please input the number of the bot you would like to like :: "))
-                botRay[i] = bot
-            for i in len(botRay):
-                Liker.liker(botArray[botRay[i]], link)
+        yn = input("Would you like all bots to like? y/n :: ")
+        if(yn == "y"):
+            Liker.massLiker(botArray, link)
+        if(yn == "n"):
+            botSize = int(input("Please input the number of bots you would like to 'like' :: "))
+            for i in botSize:
+                botRay[i] = botArray[int(input("Please input the bot number :: "))]
+        Liker.massLiker(botRay, link)
 
     elif command == "comment":
         link = input("Please input link :: ")
@@ -96,10 +96,11 @@ while True:
         postBot = int(input("Please input bot number :: "))
         Poster.poster(botArray[postBot])
         Poster(botArray[postBot])
+
     elif command == "sortComment":
         link = input("Please input a link :: ")
         instragam_sort_comments.process_comments(botArray[1],link)
-
+    
     elif command == "massComment":
         link = input("Please input link :: ")
         commentDoc = input("Please input the txt file with comments :: ")
