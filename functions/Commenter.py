@@ -7,7 +7,6 @@ from instagrapi import Client
 
 
 def commenter(bots, link, comment):
-    dirname = os.getcwd()
     botInstant = Client(request_timeout=60)
     try:
         botInstant.login(bots.email, bots.password)
