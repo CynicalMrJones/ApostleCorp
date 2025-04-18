@@ -24,7 +24,9 @@ git clone https://github.com/cynicalmrjones/ApostleCorp
   		>******@gmail.com passwd2
 		>
 		>*******@gmail.com passwd3
-3) Execute by running the python compiler on helios.py
+3) Add comment prompts to and pictures to associated folders
+
+4) Execute by running the python compiler on helios.py
 	```
 	python3 helios.py
 	```
