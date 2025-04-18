@@ -28,7 +28,7 @@ with open("InstagrapiLogins.txt", "r") as file:
         botArray.append(bot)
 
 # Grabbing prompt picture
-f = open("pic.pic", "r")
+f = open("pics/pic.pic", "r")
 draw = f.read()
 
 # platform check for clearing the console
