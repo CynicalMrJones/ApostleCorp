@@ -11,7 +11,7 @@ pip install textblob
 ```
 
 ## Installation
-Unfortunately, all bots need to be created manually and inserted into a text file. 
+Unfortunately, all bots need to be created manually and inserted into a text file.
 1) Clone the repository using
 ```
 git clone https://github.com/cynicalmrjones/ApostleCorp
@@ -27,6 +27,12 @@ git clone https://github.com/cynicalmrjones/ApostleCorp
 		>
 		>*******@gmail.com passwd3
 3) Add comment prompts to and pictures to associated folders
+    * Comment prompts are formatted as sperate lines for each statement
+
+        > "This is a line of text.
+        > "This is another line of text.
+
+    * Pictues work best in JPEG format
 
 4) Execute by running the python compiler on helios.py
 	```
