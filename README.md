@@ -30,7 +30,8 @@ git clone https://github.com/cynicalmrjones/ApostleCorp
     * Comment prompts are formatted as sperate lines for each statement
 
         > "This is a line of text.
-        > "This is another line of text.
+        >
+        > "This is another line of text".
 
     * Pictues work best in JPEG format
 
