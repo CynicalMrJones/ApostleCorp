@@ -4,6 +4,7 @@ from instagrapi import Client
 
 dirname = os.getcwd()
 
+
 def poster(bots):
     botInstant = Client(request_timeout=60)
     try:
@@ -15,5 +16,3 @@ def poster(bots):
         print("This operation was completed successfully!")
     except:
         print(f'{bots.email} failed to login')
-
-
