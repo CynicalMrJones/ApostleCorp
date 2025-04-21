@@ -1,5 +1,4 @@
 
-import instagrapi
 import random
 
 import os
